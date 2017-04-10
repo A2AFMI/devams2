@@ -15,7 +15,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 وبعده هذا 
 
- git clone https://github.com/A2AFMI/devams2
+ git clone https://github.com/A2AFMI/devams2.git
 
 وبعده هذا
 
