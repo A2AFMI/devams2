@@ -1,4 +1,4 @@
-كيفيه تنصيب احدث سورس عربي DEVKEEPER
+كيفيه تنصيب احدث سورس عراقي DevAMS
 
 اولا افتح ترمنال وخلي هذا
 
@@ -15,11 +15,11 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 وبعده هذا 
 
- git clone https://github.com/ldevl/DEVKEEPER.git
+ git clone https://github.com/A2AFMI/devams2
 
 وبعده هذا
 
- cd DEVKEEPER
+ cd DEVAMS
 
 وهذ 
 
@@ -40,11 +40,11 @@ redis-server
  وسوي رن من ملف لانج
 بعد متسوي رن افتح ترمنال جديد واكتب 
  
- cd DEVKEEPER
+ cd DEVAMS
  
 انتر وبعدها هل امر 
 
- bash DEVKEEPER.sh -t
+ bash DEVAMS.sh -t
  
  انتظر 5 ثواني يشتغل بوت 
 هذا ملف يقلل وكفات بوت 
