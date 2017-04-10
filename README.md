@@ -19,7 +19,7 @@ sudo apt-get install libreadline-dev libconfig-dev libssl-dev lua5.2 liblua5.2-d
 
 وبعده هذا
 
- cd DEVAMS
+ cd devams2
 
 وهذ 
 
@@ -40,7 +40,7 @@ redis-server
  وسوي رن من ملف لانج
 بعد متسوي رن افتح ترمنال جديد واكتب 
  
- cd DEVAMS
+ cd devams2
  
 انتر وبعدها هل امر 
 
