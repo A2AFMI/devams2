@@ -102,31 +102,31 @@ local function kick_ban_res(extra, success, result)
       local get_cmd = extra.get_cmd
        if get_cmd == "زحلكه" then
          if member_id == from_id then
-            send_large_msg(receiver, "لآ يمكنـــــك 🗣حظــر نفســـك♥️❗️")
+            send_large_msg(receiver, "لا يمكنك 🗣حظر نفسك♥️❗️")
    return
          end
          if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-            send_large_msg(receiver, "لآ يمكنـــــك🖐🏽 حظـٰر الادمـــن آؤ المديــــــر♥️❗️")
+            send_large_msg(receiver, "لا يمكنك🖐🏽 حظر الادمن او المدير♥️❗️")
    return
          end
    kick_user(member_id, chat_id)
       elseif get_cmd == 'حظر' then
         if is_momod2(member_id, chat_id) and not is_admin2(sender) then
-   send_large_msg(receiver, "لآ يمكنـــــك🖐🏽 حظـٰر الادمـــن آؤ المديــــــر♥️❗️")
+   send_large_msg(receiver, "لا يمكنك🖐🏽 حظر الادمن او المدير♥️❗️")
    return
         end
-        send_large_msg(receiver, 'العضــــــــضو🗣 @'..member..' \nتہمہ بالفعــُُــل ✔️ حظره مہن المجموِعـــةة🍾🍷')
+        send_large_msg(receiver, 'العضو🗣 @'..member..' \nتم بالفعل ✔️ حظره من المجموِعة🍾🍷')
   ban_user(member_id, chat_id)
       elseif get_cmd == 'الغاء حظر' then
-        send_large_msg(receiver, 'العضـــــو🗣 @'..member..' \nتہمہ الغــٰاء 🖐🏽حظــره مہنہ المجموعـُ ــةة🍾🍷')
+        send_large_msg(receiver, 'العضو🗣 @'..member..' \nتم الغاء 🖐🏽حظره من المجموعة🍾🍷')
         local hash =  'banned:'..chat_id
         redis:srem(hash, member_id)
-        return 'العضـــٰو🗣 ['..user_id..'] \n\nتہمہ بالفعــُُــل ✔️ حظره مہنہ المجموِعـــةة🍾🍷'
+        return 'العضو🗣 ['..user_id..'] \n\nتم بالفعل ✔️ حظره من المجموِعة🍾🍷'
       elseif get_cmd == 'حظر عام' then
-        send_large_msg(receiver, 'العضـــــو🗣 [@'..member..'] \nتہمہ بالفعــــل ✔️ حظـــره مہنہ كہل المجموعــــــات♥️❗️ ')
+        send_large_msg(receiver, 'العضو🗣 [@'..member..'] \nتم بالفعل ✔️ حظره من جميع المجموعات♥️❗️ ')
   banall_user(member_id)
       elseif get_cmd == 'الغاء العام' then
-        send_large_msg(receiver, 'العضــــٰو🗣 [@'..member..'] \nتہمہ بالفعـــٰل الغــٰٰـاء ✖️  حظُـره مہنہ كہل 🗣المجموعـــــات♥️❗️')
+        send_large_msg(receiver, 'العضو🗣 [@'..member..'] \nتم بالفعل الغاء ✖️  حظُـره من جميع 🗣المجموعات♥️❗️')
      unbanall_user(member_id)
     end
 end
@@ -135,7 +135,7 @@ local function run(msg, matches)
 local support_id = msg.from.id
  if matches[1]:lower() == 'ايدي' and msg.to.type == "chat" or msg.to.type == "user" then
     if msg.to.type == "user" then
-      return "🔹  ايــــدي البوت : "..msg.to.id.. "\n\n🔹  ايــٰـدي حسابـــٰك : "..msg.from.id.. "\n\n🔹   المطــور :  @llX8Xll "
+      return "🔹  ايدي البوت : "..msg.to.id.. "\n\n🔹  ايدي حسابك : "..msg.from.id.. "\n\n🔹   المطور :  @a_2afmi "
     end
     if type(msg.reply_id) ~= "nil" then
       local print_name = user_print_name(msg.from):gsub("‮", "")
@@ -145,7 +145,7 @@ local support_id = msg.from.id
     elseif matches[1]:lower() == 'ايدي' then
       local name = user_print_name(msg.from)
       savelog(msg.to.id, name.." ["..msg.from.id.."] used /id ")
-      return "ايـــــدي المجموعـــــةة🍾🍷" ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id
+      return "ايدي المجموعة🍾🍷" ..string.gsub(msg.to.print_name, "_", " ").. ":\n\n"..msg.to.id
     end
   end
   if matches[1]:lower() == 'مغادره' and msg.to.type == "chat" then-- /kickme
@@ -183,17 +183,17 @@ local support_id = msg.from.id
           return
         end
         if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-           return "لآ يمكنـــــك🖐🏽 حظـٰر الادمـــن آؤ المديــــــر♥️❗️"
+           return "لا يمكنك🖐🏽 حظر الادمن او المدير♥️❗️"
         end
         if tonumber(matches[2]) == tonumber(msg.from.id) then
-           return "لآ يمكنـــــك 🗣حظــر نفســـك♥️❗️"
+           return "لا يمكنك 🗣حظر نفسك♥️❗️"
         end
         local print_name = user_print_name(msg.from):gsub("‮", "")
      local name = print_name:gsub("_", "")
   local receiver = get_receiver(msg)
-        savelog(msg.to.id, name.."العضـــــو🗣 ["..msg.from.id.."] \nتہمہ بالفعــُُــل ✔️ حظــره مہن المجموِعـــةة🍾🍷".. matches[2])
+        savelog(msg.to.id, name.."العضو🗣 ["..msg.from.id.."] \nتم بالفعل ✔️ حظره من المجموعة🍾🍷".. matches[2])
         ban_user(matches[2], msg.to.id)
-  send_large_msg(receiver, 'العضـــــو🗣 ['..matches[2]..'] \nتہمہ بالفعــُُــل ✔️ حظــره مہن المجموِعـــةة🍾🍷')
+  send_large_msg(receiver, 'العضـــــو🗣 ['..matches[2]..'] \nتہمہ بالفعــُُــل ✔️ حظره من المجموعة🍾🍷')
       else
   local cbres_extra = {
   chat_id = msg.to.id,
@@ -220,8 +220,8 @@ local support_id = msg.from.id
          redis:srem(hash, user_id)
          local print_name = user_print_name(msg.from):gsub("‮", "")
    local name = print_name:gsub("_", "")
-         savelog(msg.to.id, name.."العضـــــو🗣 ["..msg.from.id.."] \nتہمہ الغــٰاء 🖐🏽حظــره مہنہ المجموعـُ ــةة🍾🍷".. matches[2])
-         return 'العضـــــو🗣 '..user_id..'] \nتہمہ الغــٰاء 🖐🏽حظــره مہنہ المجموعـُ ــةة🍾🍷'
+         savelog(msg.to.id, name.."العضو🗣 ["..msg.from.id.."] \nتم الغاء 🖐🏽حظره من المجموعة🍾🍷".. matches[2])
+         return 'العضو🗣 '..user_id..'] \nتم الغاء 🖐🏽حظره من المجموعة🍾🍷'
       else
   local cbres_extra = {
    chat_id = msg.to.id,
@@ -246,10 +246,10 @@ if matches[1]:lower() == 'زحلكه' then
    return
   end
   if not is_admin1(msg) and is_momod2(matches[2], msg.to.id) then
-   return "لآ يمكنـــــك🖐🏽 حظـٰر الادمـــن آؤ المديــــــر♥️❗️"
+   return "لا يمكنك🖐🏽 حظر الادمن او المدير♥️❗️"
   end
   if tonumber(matches[2]) == tonumber(msg.from.id) then
-   return "لآ يمكنـــــك 🗣حظــر نفســـك♥️❗️"
+   return "لا يمكنك 🗣حظر نفسك♥️❗️"
   end
     local user_id = matches[2]
     local chat_id = msg.to.id
@@ -287,7 +287,7 @@ end
           return false
         end
          banall_user(targetuser)
-         return 'العضـــــو🗣 ['..user_id..' ] \nتہمہ بالفعــــل ✔️ حظـــره مہنہ كہل المجموعــــــات♥️❗️'
+         return 'العضو🗣 ['..user_id..' ] \nتم بالفعل ✔️ حظره من كل المجموعات♥️❗️'
      else
  local cbres_extra = {
   chat_id = msg.to.id,
@@ -307,7 +307,7 @@ end
            return false
         end
          unbanall_user(user_id)
-         return 'العضـــــو🗣 ['..user_id..' ] \nتہمہ بالفعـــٰل الغــٰٰـاء ✖️  حظُـره مہنہ كہل 🗣المجموعـــــات♥️❗️'
+         return 'العضو🗣 ['..user_id..' ] \nتم بالفعل الغاء ✖️  حظُره من كل 🗣المجموعات♥️❗️'
     else
   local cbres_extra = {
    chat_id = msg.to.id,

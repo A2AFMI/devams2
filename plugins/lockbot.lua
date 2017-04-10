@@ -46,11 +46,11 @@ local function mohammed (msg, matches)
   local chatId = msg.to.id
   if matches[1] == 'قفل البوتات' then
     enableAntiBot(chatId)
-  return 'تم #قـــفل |🔐| البوتـــــاتْ فــيٰ هذه المجموعـــةة 🌐 عزيزيْ ❤️‼️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
+  return 'تم #قفل |🔐| البوتات في هذه المجموعة 🌐 عزيزيْ ❤️‼️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
   end
   if matches[1] == 'فتح البوتات' then
     disableAntiBot(chatId)
-  return 'تـم #فتُـــح |🔓|  البوتـــٰات فــي هذه المجموعـــٰةة 🌐  عزيزيْ ❤️‼️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
+  return 'تم #فتح |🔓|  البوتات في هذه المجموعة 🌐  عزيزيْ ❤️‼️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
   end
   if matches[1] == 'chat_add_user' or matches[1] == 'chat_add_user_link' then
     local user = msg.action.user or msg.from
@@ -81,5 +81,5 @@ return {
     '^!!tgservice (chat_add_user)$',
     '^!!tgservice (chat_add_user_link)$'
   },
-  run = mohammed
+  run = a_2afmi
 }

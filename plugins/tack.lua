@@ -31,7 +31,7 @@ end
 local function keeper(msg, matches) 
     local receiver = get_receiver(msg) 
  if not is_momod(msg) then 
-  return " للمہشہرفہيہنہ 🕵🏻  فہقہطہ❤️❗️ "
+  return " للمشرفين 🕵🏻 فقط❤️❗️ "
  end 
  if matches[1] then 
  if msg.to.type == 'chat' then 
@@ -51,5 +51,5 @@ return {
   patterns = { 
     "^تاك +(.+)$" 
   }, 
-  run = keeper 
+  run = a_2afmi 
 }

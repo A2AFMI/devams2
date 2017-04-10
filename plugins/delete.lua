@@ -5,7 +5,7 @@ local function history(extra, suc, result)
   if tonumber(extra.con) == #result then
     send_msg(extra.chatid, '"'..#result..'" من الرسائل تم تنظيفها 🔺👍❤️❗️', ok_cb, false)
   else
-send_msg(extra.chatid, 'تـم بالفعل |💋| تنظيف المجموعـــةة☄️❗️', ok_cb, false)
+send_msg(extra.chatid, 'تـم بالفعل |💋| تنظيف المجموعة☄️❗️', ok_cb, false)
 end
 end
 local function keeper(msg, matches)
@@ -19,7 +19,7 @@ local function keeper(msg, matches)
       return ""
     end
   else
-    return "للمطوريـــن فقط  عزيزي❤️❗️"
+    return "للمطورين فقط  عزيزي❤️❗️"
   end
 end
 

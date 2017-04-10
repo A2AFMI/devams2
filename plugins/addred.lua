@@ -1,5 +1,5 @@
 --[[
-------admin @llX8Xll
+------admin @a_2afmi
 
 ]]
 
@@ -48,7 +48,7 @@ local function list_chats(msg)
 
     local names = redis:hkeys(hash)
 
-    local text = 'آلردؤد هہيہ📝 : ️\n\n'
+    local text = 'الردود هي📝 : ️\n\n'
 
     for i=1, #names do
 
@@ -88,7 +88,7 @@ local function save_value(msg, name, value)
 
     redis:hset(hash, name, value)
 
-    return '('..name..')\n تہمہ اضافـــــةة آلرد✔️❗️ '
+    return '('..name..')\n تم اضافة الرد✔️❗️ '
 
   end
 
@@ -114,7 +114,7 @@ local function del_value(msg, name)
 
     redis:hdel(hash, name)
 
-    return '('..name..')\n تہمہ حـــذف آلرد✖️❗️' 
+    return '('..name..')\n تم حذف الرد✖️❗️' 
 
   end
 

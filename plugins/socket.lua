@@ -1,5 +1,5 @@
 --[[ 
------admin @llX8Xll
+-----admin @a_2afmi
 ---ضد توقف البوت
 --]]
 do

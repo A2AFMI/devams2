@@ -1,4 +1,4 @@
----by @DEV_KEEPER_NEW
+---by @A_2AFMI
 do
 
 -- Returns the key (index) in the config.enabled_plugins table

@@ -3,7 +3,7 @@ local function sudoteam(msg, matches)
 local mtn = matches[2]
 local link = matches[3]
 if not is_momod(msg) then
-return 'للادمنيه فقط ❤️❗️'
+return 'للادمنية فقط ❤️❗️'
 end
 if matches[1] == 'b' then
   return '<b>'..mtn..'</b>'

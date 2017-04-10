@@ -4,8 +4,8 @@ local function run(msg, matches)
 local reply_id = msg['id']
 if is_momod(msg) and matches[1]== 'م2' then
 local S = [[  
- 🗽ⓢⓞⓤⓡⓢ ⓚⓔⓔⓟⓔⓡ🗽
-    🏌🏿‍♀️الاوامـر الخاصه|🎏| بحماية🏌🏿‍♀️
+ 🗽̶D̶e̶v̶A̶M̶S̶🗽
+    🏌🏿‍♀️اوامر|🎏| الحماية🏌🏿‍♀️
 🎠تستخدم {قفل / للقفل and فتح / للفتح}🎠
 🔺_________|⚡️|___________🔻
 ■•––––( الروابط 🚩) 
@@ -24,15 +24,15 @@ local S = [[
 ■•––––( التكرار 🎏)
 ■•––––( الكلايش 📯) 
 🔺___________|⚡️|__________🔻
-🗯Ꝅєєꝓєℜ🔊@llX8Xll
-🗯Ꝅєєꝓєℜ🔊@lZlxlZlBOT
-🗯๕ḩẩหหℓё🔊@keeper_ch 
+🗯DEV🔊@A_2AFMI
+🗯DEVBOT🔊@A_2AFMIBOT
+🗯DEVCHANNEL🔊@il_20 
 ]]
 reply_msg(reply_id, S, ok_cb, false) 
 end
 
 if not is_momod(msg) then
-local S = "  للمشرفــــٰين 🕵🏻 فقـــط عزيــزي♥️❗️ "
+local S = "  للمشرفين 🕵🏻 فقط عزيزي♥️❗️ "
 reply_msg(reply_id, S, ok_cb, false)
 end
 

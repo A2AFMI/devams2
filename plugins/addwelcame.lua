@@ -8,7 +8,7 @@ local group_welcome = redis:hget(hash,'welcome')
 if matches[1] == 'حذف الترحيب' and not matches[2] and is_momod(msg) then 
     
    redis:hdel(hash,'welcome')
-        return 'الترحيـــــب تـم ✔️حذفـٰــه بنجـــــاح🍾🍷'
+        return 'الترحيب تم ✔️حذفه بنجاح🍾🍷'
 end
 
 local url , res = http.request('http://api.gpmod.ir/time/')
@@ -17,7 +17,7 @@ local jdat = json:decode(url)
 
 if is_momod(msg) and matches[1] == 'ضع ترحيب' then
 redis:hset(hash,'welcome',matches[2])
-        return 'تـــم بالفعــــل حفـظ🕵🏻 الترحيـــــب عزيزيْ💋🍷'
+        return 'تم بالفعل حفظ🕵🏻 الترحيب عزيزي💋🍷'
 end
 
 if matches[1] == 'chat_add_user' and msg.service then
@@ -55,4 +55,4 @@ return {
   run = run
 }
 end
----by @llX8Xll
+---by @a_2afmi

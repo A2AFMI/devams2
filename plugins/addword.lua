@@ -1,11 +1,11 @@
 --[[ 
 ----- (منع والغاء منع الكلمات)
----admin @llX8Xll
+---admin @a_2afmi
 --]]
 local function addword(msg, name)
     local hash = 'chat:'..msg.to.id..':badword'
     redis:hset(hash, name, 'newword')
-    return "تــٰم بالفعـــل ☑️ اضافــةة كلمـٰه 🗓 جديده آلى قائمــةة المنـٰـع❌♥️❗️\n>"..name
+    return "تم بالفعل ☑️ اضافة كلمة 🗓 جديدة الى قائمة المنع❌♥️❗️\n>"..name
 end
 
 local function get_variables_hash(msg)
@@ -19,7 +19,7 @@ local function list_variablesbad(msg)
 
   if hash then
     local names = redis:hkeys(hash)
-local text = 'قائمـــٰة📝 منع الكلمــٰات المحظـٰٰـوره❌❤️❗️ :\n\n'
+local text = 'قائمة📝 منع الكلمات المحظورة❌❤️❗️ :\n\n'
     for i=1, #names do
       text = text..'> '..names[i]..'\n'
     end
@@ -33,7 +33,7 @@ function clear_commandbad(msg, var_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:del(hash, var_name)
-  return 'تـٰٰم بالفعــــــل ☑️ تنظيـٰــــٰف قائمــــة 📝 المنـع في المجموعـــٰةة♥️‼️'
+  return 'تم بالفعل ☑️ تنظيف قائمة 📝 المنع في المجموعة♥️‼️'
 end
 
 local function list_variables2(msg, value)
@@ -71,13 +71,13 @@ function clear_commandsbad(msg, cmd_name)
   --Save on redis  
   local hash = get_variables_hash(msg)
   redis:hdel(hash, cmd_name)
-  return ''..cmd_name..' بالفعـــــل ☑️ تم الغائها 👍 من قائمـٰـٰٰـةة 📝 المنــع💛‼️ '
+  return ''..cmd_name..' بالفعل ☑️ تم حذفها 👍 من قائمة 📝 المنع💛‼️ '
 end
 
 local function run(msg, matches)
   if matches[2] == 'منع' then
   if not is_momod(msg) then
-   return 'للمشرفيـــــــن 🕵🏻  فـقــط عزيـــزي♥️❗️'
+   return 'للمشرفين 🕵🏻  فقط عزيزي♥️❗️'
   end
   local name = string.sub(matches[3], 1, 50)
 

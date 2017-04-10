@@ -4,7 +4,7 @@ local function pre_process(msg)
     local fwd = 'mate:'..msg.to.id
     if redis:get(fwd) and not is_momod(msg) and msg.fwd_from then
             delete_msg(msg.id, ok_cb, true)
-            send_large_msg(get_receiver(msg), '#تنبيــــــــهْ 🗣 اعــادة التوجيــه مغــلقه حالـياً داخل هذه المجموعــه🕴🏾\n🔴 User @'..msg.from.username)
+            send_large_msg(get_receiver(msg), '#تنبيــــــــهْ 🗣 اعادة التوجيه مغلقة حالياً داخل هذه المجموعة🕴🏾\n🔴 User @'..msg.from.username)
             return "ok"
 end
         return msg
@@ -21,7 +21,7 @@ local reply_id = msg['id']
          end
 local reply_id = msg['id']
     if not is_momod(msg) and matches[1]== 'قفل' and matches[2]== 'التوجيه' then
-    local text= 'للـمـشـرفـيـن فـقـط ✍🏾🖕🏿'
+    local text= 'للمشرفين فقط ✍🏾🖕🏿'
  return reply_msg(reply_id, text, ok_cb, false)
 end
 local reply_id = msg['id']
@@ -34,7 +34,7 @@ end
 
 local reply_id = msg['id']
 if not is_momod(msg) and matches[1]== 'فتح' and matches[2]== 'التوجيه' then
-local text= ' للـمـشـرفـيـن فـقـط ✍🏾🖕🏿'
+local text= ' للمشرفين فقط ✍🏾🖕🏿'
  return reply_msg(reply_id, text, ok_cb, false)
  end
 

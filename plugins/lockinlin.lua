@@ -12,12 +12,12 @@ end
 if is_momod(msg) and matches[1] == "قفل" and matches[2] == "الانلاين" then
 local inline = 'mate:'..msg.to.id
 redis:set(inline, true)
-return  'تـــم #قفــــل|🔐|الانلايـن فــي هــذه المجموعـــــــــةة❤️❗️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
+return  'تم #قفل|🔐|الانلاين في هذه المجموعة❤️❗️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n'
 end
 if is_momod(msg) and matches[1] == "فتح" and matches[2] == "الانلاين" then
     local inline = 'mate:'..msg.to.id
     redis:del(inline)
-    return 'تـــم #فتـح|🔐|الانلاين فــي هــذه المجموعـــــــــةة❤️❗️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n' 
+    return 'تم #فتح|🔐|الانلاين في هذه المجموعة❤️❗️\n🔲♦️Us : @'..msg.from.username..'\n🔲♦️ID : '.. msg.from.id..'\n' 
   end
 end
 return {
